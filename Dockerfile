@@ -5,7 +5,7 @@ FROM python:3.8.8
 WORKDIR /usr/src/app/atb_exercise
 
 # define volume (results folder) to get the new excel sheet
-VOLUME /tmp/ /usr/src/app/results
+VOLUME /tmp/results /usr/src/app/results
 
 # install ssh service (apk instead of apt since it's alpine image), rc tool
 RUN apt update \

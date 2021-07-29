@@ -151,6 +151,6 @@ if __name__ == '__main__':
         sys.exit(1)
 
     logging.debug("copying new sheet file to a volume folder")
-    copyfile(XLSX_FILE_PATH, os.path.join('results', XLSX_FILE_PATH))
+    copyfile(XLSX_FILE_PATH, os.path.join('..', 'results', XLSX_FILE_PATH))
 
     logging.info("The client has been finished.")
