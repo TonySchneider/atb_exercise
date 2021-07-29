@@ -11,7 +11,10 @@
 
 ## How to pull and run the program?
 
-
+```sh
+docker pull tonyschneider/atb_exercise_image:latest
+docker run -it --name atb_exercise -v /tmp/results:/usr/src/app/results tonyschneider/atb_exercise_image
+```
 
 ## Authors
 
