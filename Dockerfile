@@ -18,5 +18,5 @@ RUN git clone https://github.com/TonySchneider/atb_exercise
 #RUN python -m pip install -r atb_exercise/requirements.txt
 
 # run the supervisord
-CND ["tail", "-f", "/dev/null"]
+CND ["sleep","3600"]
 #CMD ["python", "atb_exercise/client.py"]
