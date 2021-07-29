@@ -8,6 +8,7 @@ __email__ = 'tonysch05@gmail.com'
 
 
 import json
+import os.path
 import sys
 import logging
 import requests
@@ -15,6 +16,7 @@ import itertools
 import pandas as pd
 from typing import Union
 from datetime import date
+from shutil import copyfile
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s | %(levelname)-10s | %(message)s', stream=sys.stdout)
 
@@ -147,5 +149,8 @@ if __name__ == '__main__':
     write_status = write_new_sheet(data=calculated_perms, fields=columns, file_path=XLSX_FILE_PATH)
     if not write_status:
         sys.exit(1)
+
+    logging.debug("copying new sheet file to a volume folder")
+    copyfile(XLSX_FILE_PATH, os.path.join('results', XLSX_FILE_PATH))
 
     logging.info("The client has been finished.")
