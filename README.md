@@ -4,8 +4,6 @@
 
 * ubuntu 18.04 / 20.04 (stable version)
 * docker service
-* python version >= 3.7
-* see requirements.txt file that includes all necessary pip installations
 
 ## Docker hub image link:
 
