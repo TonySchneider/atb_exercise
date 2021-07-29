@@ -1,5 +1,5 @@
 # using the lightweight image as required (3.7-alpine)
-FROM python:3.8.8-alpine
+FROM python:3.9-alpine
 
 # define work dir
 WORKDIR /usr/src/app
