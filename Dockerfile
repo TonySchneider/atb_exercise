@@ -1,5 +1,5 @@
 # using the lightweight image as required (3.7-alpine)
-FROM python:3.9-alpine
+FROM python:3.7-alpine
 
 # define work dir
 WORKDIR /usr/src/app
@@ -15,7 +15,8 @@ RUN apk update \
 RUN git clone https://github.com/TonySchneider/atb_exercise
 
 # install python requirements
-RUN python -m pip install -r atb_exercise/requirements.txt
+#RUN python -m pip install -r atb_exercise/requirements.txt
 
 # run the supervisord
-CMD ["python", "atb_exercise/client.py"]
+CND ["tail", "-f", "/dev/null"]
+#CMD ["python", "atb_exercise/client.py"]
