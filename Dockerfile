@@ -6,7 +6,6 @@ WORKDIR /usr/src/app
 
 # define volume (results folder) to get the new excel sheet
 VOLUME results /usr/src/app/results
-RUN mkdir /usr/src/app/results
 
 # install ssh service (apk instead of apt since it's alpine image), rc tool
 RUN apk update \
